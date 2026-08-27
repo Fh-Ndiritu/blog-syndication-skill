@@ -48,6 +48,23 @@ an angle calls for an outside/skeptical voice.
 - <deep page 1 — e.g. comparison/listicle post>
 - <deep page 2 — e.g. "for professionals" page>
 - <deep page 3 — e.g. features page>
+
+## Copy rules that bind every syndicated article
+Anything the company's own site does NOT claim, and articles must not claim
+either — e.g. a white-label supplier/vendor that must never be named, a tier
+that's built but not yet purchasable and must not be implied as already bought,
+a competitor that can be named in a comparison but never implied as a partner
+or integration. Pull these from the site's own hedges and disclaimers; if the
+homepage is careful not to say something, the articles have to be equally
+careful.
+
+## Platform → angle log
+Fill this in as you go — one row per platform, added the moment that platform's
+article goes live, not batched at the end. This is the actual record of what
+ran where; keep it current or it stops being trustworthy.
+
+| Platform | Angle | Voice | Links | Status |
+|---|---|---|---|---|
 ```
 
 ## The duplicate-content rule (why angles matter)
