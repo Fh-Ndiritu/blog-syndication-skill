@@ -45,6 +45,26 @@ traffic and a natural-looking link profile. Prioritise getting your strongest,
 most keyword-relevant angles onto the **dofollow** platforms (Bear Blog, Blogger,
 Mataroa, and the company's own domains).
 
+## Known platform bugs / quirks
+
+Things that have shown up in live runs that are worth recognizing on sight rather
+than re-diagnosing from scratch:
+
+- **Bear Blog can silently ignore the title/slug you set.** Even with the
+  frontmatter typed in the documented format and verified byte-for-byte correct
+  in the textarea's actual DOM value before submitting, a post has published
+  titled "New post" with an auto-generated slug instead — on both a fresh post
+  and an edited existing one. This is a platform/account-side bug, not a
+  formatting error, so re-typing it a different way doesn't fix it. Verify the
+  insertion, retry once cleanly, and if it still comes out wrong, stop and flag
+  it to the user instead of creating more attempts — each retry that makes a new
+  post risks leaving a stray duplicate draft, and drafts must never be deleted
+  without the user asking.
+- **Native browser dialogs (Bear Blog's delete confirm, Google Docs' "Publish to
+  the web") hang automation for ~30s** rather than failing fast — see the
+  "Safety boundaries" section of `SKILL.md` for the required response (stop
+  driving that tab, hand off to the user).
+
 ## Per-platform notes
 
 ### Medium
@@ -108,6 +128,13 @@ ProseMirror editor, then an editorial review queue — the post won't be instant
 live. At submit it asks whether the piece is original (yes) and requires a
 disclosure/attestation about rights and any vested interest. Add a one-line
 affiliation disclosure to the article body first, then attest truthfully.
+Story Settings has several gates that trip up a first pass: the TL;DR/description
+field must be filled in before the submit control even enables; tags must be
+**committed by clicking the autocomplete suggestion chip**, not by pressing
+Return (Return alone can leave a typed tag uncommitted); and there's both a
+panel-level Continue/Submit button and a separate toolbar-level Publish/Submit
+button — clicking one without the other can leave the story half-submitted, so
+check both landed.
 
 ### Quora
 Works best as a genuinely useful answer to a relevant question, or a post in a
